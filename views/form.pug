@@ -1,0 +1,17 @@
+extends layout
+block content
+    html
+        head
+            title Add a new message
+        header
+            h1 Add your message!
+        body
+            div
+                form.myForm(method="POST" action="/new")
+                    label(for="name") Enter your name:
+                    input(type="text" name="name" id="name" placeholder="Name...")
+                    label(for="message") Enter your message:
+                    input(type="text" name="message" id="message" placeholder="Message...")
+                    button(type="submit") Submit
+                a.homepage(href="/") Return to homepage
+

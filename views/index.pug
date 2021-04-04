@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  html
+    head
+      title #{title}
+    header
+      h1 Welcome to #{title}!
+    each val in messages
+      div.message
+        p Message: #{val.text}
+        p User: #{val.user}
+        p Date: #{val.added}
+    div.postnew
+      a(href="/new") Click to add a message!
+
